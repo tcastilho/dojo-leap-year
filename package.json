@@ -9,13 +9,20 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon .",
-    "test": "mocha -R spec **/*.spec.js"
+    "test": "jest --config test.json --forceExit",
+    "test:integration": "jest --config test.json --forceExit --collectCoverage false test/integration/",
+    "test:unit": "jest --config test.json --forceExit --testPathIgnorePatterns test --collectCoverage true"
   },
   "dependencies": {
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "mocha": "^3.1.2",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^22.1.4",
+    "jest-junit": "^3.4.1",
+    "nock": "^9.2.5",
     "nodemon": "1.18.7"
   },
   "repository": {
