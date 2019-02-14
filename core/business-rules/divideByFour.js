@@ -3,7 +3,7 @@ const divide = data => {
     try {
       if (data % 4 === 0)
         resolve(data)
-      throw "Não divisível por 4"
+      throw 'Não divisível por 4'
     } catch (err) {
       reject(err)
     }

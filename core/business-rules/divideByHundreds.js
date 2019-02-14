@@ -3,7 +3,7 @@ const divide = data => {
   try {
     if ((data % 100 !== 0) || (data % 400 === 0))
       resolve(data)
-    throw "É divisível por 100"
+    throw 'É divisível por 100'
   } catch (err) {
     reject(err)
   }
